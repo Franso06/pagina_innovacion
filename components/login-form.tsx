@@ -62,19 +62,17 @@ export function LoginForm() {
           router.refresh()
         }, 1000)
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error("Error completo:", error)
 
       let errorMessage = "Ocurrió un error durante el inicio de sesión."
 
-      if (error?.message) {
-        if (error.message.includes("Failed to fetch")) {
-          errorMessage = "Error de conexión. Verifica tu conexión a internet."
-        } else if (error.message.includes("Invalid login credentials")) {
-          errorMessage = "Credenciales incorrectas."
-        } else {
-          errorMessage = error.message
-        }
+      if (error instanceof Error) {
+        // Ahora TypeScript sabe que 'error' tiene una propiedad 'message'
+        console.error(error.message);
+      } else {
+        // Manejar otros tipos de errores
+        console.error("An unknown error occurred", error);
       }
 
       setError(errorMessage)

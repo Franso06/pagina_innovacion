@@ -117,8 +117,8 @@ export function NotificationsList() {
     // Todas las notificaciones eliminadas
   }
 
-  // Filtrar notificaciones por categoría
-  const allNotifications = notifications
+  // // Filtrar notificaciones por categoría
+  // const allNotifications = notifications
   const unreadNotifications = notifications.filter((notification) => !notification.read)
   const orderNotifications = notifications.filter((notification) => notification.category === "order")
   const systemNotifications = notifications.filter((notification) => notification.category === "system")

@@ -23,13 +23,13 @@ import {
 } from "recharts"
 
 export default function MetricsPageClient() {
-  const [userRole, setUserRole] = useState<UserRole>("supervisor")
+  // const [userRole, setUserRole] = useState<UserRole>("supervisor")
 
-  useEffect(() => {
-    const role = getCurrentUserRole()
-    setUserRole(role)
-    // Eliminamos la redirección para permitir acceso sin restricciones
-  }, [])
+  // useEffect(() => {
+  //   const role = getCurrentUserRole()
+  //   setUserRole(role)
+  //   // Eliminamos la redirección para permitir acceso sin restricciones
+  // }, [])
 
   // Datos de ejemplo para las métricas
   const technicianOrdersData = [
