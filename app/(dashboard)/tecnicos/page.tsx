@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function TechniciansPage() {
   return (
     <DashboardShell>
-      <DashboardHeader heading="Gestión de Técnicos" text="Administra los técnicos y sus asignaciones" />
+      <DashboardHeader heading="Gestión de Técnicos" text="Administra los técnicos" />
       <TechniciansList />
     </DashboardShell>
   )
